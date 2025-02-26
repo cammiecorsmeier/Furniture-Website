@@ -1,0 +1,226 @@
+.hero {
+    /*background-image: url('furnitures.jpeg'); /* Path to your image */
+    /*background-size: 100% auto; /* Cover the entire background */
+    /*background-position: top center; /* Center the background image 
+    background-repeat: no-repeat; */
+    
+    height:100%;
+    width:100%;
+    background: linear-gradient(rgba(0,0,0,0.4) , rgba(0,0,0,0.4)) , url('furnitures.jpeg');
+    /*background-image: url('nature.jpeg');*/
+    background-position:center;
+    background-size:cover;
+    background-repeat: repeat-y;
+    position:absolute;
+    overflow:auto;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-around; /* Evenly space out the anchor elements */
+    background-color: #333; /* Navbar color */
+    padding: 10px 0; /* Top and bottom padding */
+}
+
+#nav a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 8px 16px; /* Padding around the text */
+    font-size: 16px; /* Font size */
+}
+
+#nav a:hover {
+    background-color: #ddd; /* Color change on hover */
+    color: black; /* Text color change on hover */
+}
+    
+#title {
+    color: white;
+    font-family: 'Pacifico', cursive;
+    font-weight:bold;
+    font-size:60px;
+    text-align:center;
+}
+h1 {
+    color: teal;
+    font-family: "Montserrat";
+    text-align:center;
+    margin-bottom:1%;
+}
+
+#logo_image {
+    height:50px;
+    width:50px;
+    display:block;
+    margin:auto;
+    margin-bottom:15%;
+}
+
+a {
+    color: blue; /* Set the color of the link text */
+    text-decoration: underline; /* Add underline to the link text */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    }
+
+.main {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*border: 2px solid; */
+    border-radius:10px;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:40px;
+    padding-right:40px;
+    background-color: #DED4E8;
+    margin-top:40px;
+}
+
+#about-section {
+    position: absolute;
+    left: 50%;
+    top:45%;
+    transform: translate(-50%, -50%);
+    /*border: 2px solid; */
+    border-radius:10px;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:40px;
+    padding-right:40px;
+    background-color: #DED4E8;
+}
+
+#cart-products {
+    position: absolute;
+    left: 50%;
+    top:60%;
+    transform: translate(-50%, -50%);
+    /*border: 2px solid; */
+    border-radius:10px;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:40px;
+    padding-right:40px;
+    background-color: #DED4E8;
+    height:50%;
+    width:45%;
+    overflow:auto;
+}
+
+#purchase-button {
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    height:25px;
+}
+
+#purchase-button:hover {
+    background-color: #0062cc;
+}
+
+#clearCart-button
+{
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(232, 81, 81);
+    color: white;
+    cursor: pointer;
+    height:25px;
+    margin-left:50%;
+}
+
+#clearCart-button:hover {
+    background-color: #dd1d1d;
+}
+
+
+input {
+    border-radius:15px;
+    border-width:1;
+    border-color:#E8BA40;
+    margin-bottom:5%;
+    height:25px;
+    right:25px;
+}
+
+#account-email {
+    margin-bottom:15%;
+}
+
+button {
+    display:block;
+    margin:auto;
+
+}
+
+#mainfooter {
+    text-align:center;
+}
+
+.search-bar {
+    position: absolute;
+    display: flex; 
+    flex-direction: row;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#numResults {
+    position: absolute;
+    display: flex; 
+    flex-direction: row;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:red;
+}
+
+#filter-dropdown {
+    margin-left:25px;
+    height:50px;
+    border-radius:5px;
+}
+
+#results {
+    top: 30%;
+    left:10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    position:relative;
+}
+
+#results div {
+    flex: 0 0 25%;
+    margin:10px;
+}
+
+#searchInput {
+    margin-right:25px;
+
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Example style - adjust as needed */
+    width:200px;
+}
+
+#searchButton {
+    margin-top:5px;
+
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: #0062cc;
+}
+
+

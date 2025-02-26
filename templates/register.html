@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script src="../static/home.js"></script>
+    <link rel="stylesheet" href="../static/index.css">
+    <link rel="shortcut icon" href="./static/sofaking.png">
+</head>
+<body>
+    <div class = "hero">
+        <div id = "nav">
+            {% if not session.logged_in %}
+                <a onclick = "openRegister()">Register</a>
+                <a onclick = "openLogin()">Login</a>
+            {% else %}
+                <a onclick = "logout()">Logout</a>
+            {% endif %}
+            <a onclick = "openAbout()">About</a>
+            <a onclick = "openSearch()">Search</a>
+            {% if session.logged_in %}
+                <a onclick = "openAccount()">Account</a>
+                <a id = "cartLink" onclick = "openCart()">Cart</a>
+            {% endif %}
+        </div>
+        <h1 id = "title">The Sofa King Store</h1>
+        <div class = "main">
+            <h1>Register</h1>
+            <img id = "logo_image" src = "../static/sofaking.png" alt = "company logo">
+            <label for = "register-username">Username: </label>
+            <input type = "text" id = "register-username" name = "username" placeholder = "Enter Username">
+            <br><br>
+            <label for = "register-password">Password: </label>
+            <input type = "password" id = "register-password" name = "password" placeholder = "Enter Password">
+            <br><br>
+            <label for = "register-email">Email: </label>
+            <input type = "email" id = "register-email" name = "email" placeholder = "Enter Email">
+            <br><br>
+            <div>
+                <!--<button onclick = "showNames()">Click for all names!</button> -->
+                <button onclick = "Register()">Register</button>
+            </div>
+            <p id = "mainfooter">Existing User? <a onclick = "openLogin()">Log in!</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <script src="../static/home.js"></script>
+    <link rel="stylesheet" href="../static/index.css">
+    <link rel="shortcut icon" href="./static/sofaking.png">
+</head>
+<body>
+    <div class = "hero">
+        <div id = "nav">
+            {% if not session.logged_in %}
+                <a onclick = "openRegister()">Register</a>
+                <a onclick = "openLogin()">Login</a>
+            {% else %}
+                <a onclick = "logout()">Logout</a>
+            {% endif %}
+            <a onclick = "openAbout()">About</a>
+            <a onclick = "openSearch()">Search</a>
+            {% if session.logged_in %}
+                <a onclick = "openAccount()">Account</a>
+                <a id = "cartLink" onclick = "openCart()">Cart</a>
+            {% endif %}
+        </div>
+        <h1 id = "title">The Sofa King Store</h1>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" name="search" placeholder="Search...">
+            <button onclick = "submitSearch()" type="submit" id="searchButton">Search</button>
+            <select id="filter-dropdown">
+                <option value="" selected disabled hidden>Sort By</option>
+                <option value = "price_low">Price (Lowest to Highest)</option>
+                <option value = "price_high">Price (Highest to Lowest)</option>
+                <option value = "qty">Best Seller</option>
+                <option >None</option>
+            </select>
+        </div>
+        <h1 id = "numResults"></h1>
+        <div id = "results">
+        </div>
+    </div>
+</body>
+</html>

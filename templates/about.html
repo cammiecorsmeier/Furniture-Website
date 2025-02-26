@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="../static/index.css">
+    <script src="../static/home.js"></script>
+    <link rel="shortcut icon" href="./static/sofaking.png">
+</head>
+<body>
+    <div class = "hero">
+        <div id = "nav">
+            {% if not session.logged_in %}
+                <a onclick = "openRegister()">Register</a>
+                <a onclick = "openLogin()">Login</a>
+            {% else %}
+                <a onclick = "logout()">Logout</a>
+            {% endif %}
+            <a onclick = "openAbout()">About</a>
+            <a onclick = "openSearch()">Search</a>
+            {% if session.logged_in %}
+                <a onclick = "openAccount()">Account</a>
+                <a id = "cartLink" onclick = "openCart()">Cart</a>
+            {% endif %}
+        </div>
+        <h1 id = "title">The Sofa King Store</h1>
+        <div id = "about-section">
+            <h1>About</h1>
+            <p>The Sofa King Store was developed in the Spring Semester of 2024 at University of South Florida by Jayden Stilla, Eshaani, and Cammie.
+                This website has the biggest variety of sofas on the internet and we personally guarantee that we have a sofa that 
+                you will like!
+            </p>
+        </div>
+    </div>
+</body>
+</html>
